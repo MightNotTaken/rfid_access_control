@@ -1,5 +1,6 @@
 #! /bin/sh
 
-mkdir /accesscontrol
-cp ./backend /accesscontrol/backend
-cp ./frontend /accesscontrol/frontend
+sudo mkdir /accesscontrol
+sudo cp ./backend /accesscontrol/backend
+sudo cp ./frontend /accesscontrol/frontend
+sudo cp ./backend.service /usr/local/bin/backend.sh
