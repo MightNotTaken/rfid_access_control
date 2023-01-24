@@ -1,5 +1,5 @@
 #! /bin/sh
-
+sudo chmod 777 *
 sudo mkdir /accesscontrol
 sudo cp ./backend /accesscontrol/backend
 sudo cp ./frontend /accesscontrol/frontend
