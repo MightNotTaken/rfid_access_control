@@ -27,13 +27,13 @@ if __name__ == '__main__':
     # entrance_thread = threading.Thread(target=listen_to_entrance_gate)
     # entrance_thread.start()
 
-    exit_thread = threading.Thread(target=listen_to_exit_gate)
-    exit_thread.start()
+    # exit_thread = threading.Thread(target=listen_to_exit_gate)
+    # exit_thread.start()
 
     server_thread = threading.Thread(target=run_server)
     server_thread.start()
 
-    # counter_thread = threading.Thread(target=check_for_rfid_changes)
-    # counter_thread.start()
+    counter_thread = threading.Thread(target=check_for_rfid_changes)
+    counter_thread.start()
 
 
