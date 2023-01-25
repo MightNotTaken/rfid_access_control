@@ -1,6 +1,8 @@
 #! /bin/sh
 sudo chmod 777 *;
 sleep 1;
+sudo rm -r /accesscontrol;
+echo "removed previous installations";
 sudo mkdir /accesscontrol;
 echo "/accesscontrol directory created";
 sleep 1;
