@@ -2,7 +2,7 @@ import os
 from time import sleep
 
 def path(x):
-    return os.path.join(os.path.dirname(__file__), x)
+    return os.path.join('/accesscontrol/backend', x)
 
 def get_authorized_users():
     authorized = path('authorized')
