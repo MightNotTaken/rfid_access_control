@@ -1,0 +1,12 @@
+
+[Unit]
+Description=RFID reader service for entrance gate
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/rfidentrance.sh
+User=$USER
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

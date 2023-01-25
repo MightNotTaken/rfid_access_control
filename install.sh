@@ -1,9 +1,24 @@
 #! /bin/sh
-sudo chmod 777 *
-sudo mkdir /accesscontrol
-sudo cp ./backend /accesscontrol/backend
-sudo cp ./frontend /accesscontrol/frontend
-sudo cp ./backend.service /usr/local/bin/backend.sh
-sudo systemctl daemon-reload
-sudo systemctl enable backend.service
-sudo systemctl start backend.service
+sudo chmod 777 *;
+sleep 1;
+sudo mkdir /accesscontrol;
+sleep 1;
+sudo cp ./backend /accesscontrol/backend;
+sleep 1;
+sudo cp ./frontend /accesscontrol/frontend;
+sleep 1;
+sudo cp ./backend.service /usr/local/bin/backend.sh;
+sudo chmod +x /usr/local/bin/backend.sh;
+sleep 1;
+sudo cp ./backend.service /usr/local/bin/rfidentrance.sh;
+sudo chmod +x /usr/local/bin/rfidentrance.sh;
+sleep 1;
+sudo cp ./backend.service /usr/local/bin/rfidexit.sh;
+sudo chmod +x /usr/local/bin/rfidexit.sh;
+sleep 1;
+sudo systemctl daemon-reload;
+sleep 1;
+sudo systemctl enable backend.service;
+sleep 1;
+sudo systemctl start backend.service;
+sleep 1;
