@@ -1,6 +1,6 @@
 #! /bin/sh
 sudo chmod 777 *;
-sudo gcc ./dummy.c -o rfid_reader.o
+sudo gcc ./backend/dummy.c -o rfid_reader.o
 sudo rm -r /accesscontrol;
 echo "removed previous installations";
 sudo mkdir /accesscontrol;
