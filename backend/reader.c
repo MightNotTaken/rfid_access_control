@@ -100,7 +100,7 @@ void initialize(int argc, char** argv) {
     sscanf(argv[2], "%d", &PIN_1);
 
     parentDirectory = (char *)malloc(200 * sizeof(char));
-    sprintf(parentDirectory, "/accesscontrol/backend")
+    sprintf(parentDirectory, "/accesscontrol/backend");
     outputDirectory = (char *)malloc(strlen(parentDirectory) + strlen(argv[3]));
     joinInto(&outputDirectory, parentDirectory, argv[3]);
 }
