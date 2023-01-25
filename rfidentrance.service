@@ -5,7 +5,7 @@ Description=RFID reader service for entrance gate
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/rfidentrance.sh
-User=shivkant
+User=pi
 Restart=on-failure
 
 [Install]

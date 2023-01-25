@@ -5,7 +5,7 @@ Description=RFID reader service for exit gate
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/rfidexit.sh
-User=shivkant
+User=pi
 Restart=on-failure
 
 [Install]
