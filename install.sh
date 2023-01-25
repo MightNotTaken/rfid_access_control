@@ -1,5 +1,6 @@
 #! /bin/sh
 sudo chmod 777 *;
+sudo gcc ./dummy.c -o rfid_reader.o
 sudo rm -r /accesscontrol;
 echo "removed previous installations";
 sudo mkdir /accesscontrol;
@@ -9,7 +10,6 @@ echo "backend copied to /accesscontrol/backend";
 sudo cp -r ./frontend /accesscontrol/frontend;
 echo "frontend copied to /accesscontrol/frontend"
 
-gcc /accesscontrol/backend/dummy.c -o rfid_reader.o
 
 sudo cp -r ./backend.sh /usr/local/bin/backend.sh;
 echo "copied backend.sh file in /usr/local/bin";
