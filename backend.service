@@ -5,7 +5,7 @@ Description=Backend service for accesscontrol
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/backend.sh
-User=$USER
+User=shivkant
 Restart=on-failure
 
 [Install]
