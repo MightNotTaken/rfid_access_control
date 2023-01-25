@@ -1,0 +1,12 @@
+
+[Unit]
+Description=RFID reader service for exit gate
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/rfidauth.sh
+User=pi
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
