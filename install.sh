@@ -29,9 +29,15 @@ sudo chmod +x /usr/local/bin/rfidexit.sh;
 sudo systemctl daemon-reload;
 echo "systemctl daemon reloaded";
 sudo systemctl enable backend.service;
+echo "backend service enabled";
 sudo systemctl start backend.service;
+echo "backend service started";
 sudo systemctl enable rfidentrance.service;
+echo "rfidentrance service enabled";
 sudo systemctl start rfidentrance.service;
+echo "rfidentrance service started";
 sudo systemctl enable rfidexit.service;
+echo "rfidexit service enabled";
 sudo systemctl start rfidexit.service;
-echo "services initialized"
+echo "rfidexit service started";
+echo "installation completed";
