@@ -35,9 +35,12 @@ sudo systemctl daemon-reload;
 echo "systemctl daemon reloaded";
 sleep 1;
 sudo systemctl enable backend.service;
+sudo systemctl start backend.service;
 sleep 1;
+sudo systemctl enable rfidentrance.service;
 sudo systemctl start rfidentrance.service;
 sleep 1;
+sudo systemctl enable rfidexit.service;
 sudo systemctl start rfidexit.service;
 sleep 1;
 echo "services initialized"
