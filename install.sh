@@ -9,7 +9,7 @@ echo "backend copied to /accesscontrol/backend";
 sudo cp -r ./frontend /accesscontrol/frontend;
 echo "frontend copied to /accesscontrol/frontend"
 
-sudo gcc /accesscontrol/backend/dummy.c -o rfid_reader.o
+gcc /accesscontrol/backend/dummy.c -o rfid_reader.o
 
 sudo cp -r ./backend.sh /usr/local/bin/backend.sh;
 echo "copied backend.sh file in /usr/local/bin";
