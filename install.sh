@@ -1,6 +1,5 @@
 #! /bin/sh
 sudo chmod 777 *;
-sudo gcc ./backend/dummy.c -o rfid_reader.o
 sudo rm -r /accesscontrol;
 echo "removed previous installations";
 sudo mkdir /accesscontrol;
@@ -30,14 +29,17 @@ sudo systemctl daemon-reload;
 echo "systemctl daemon reloaded";
 sudo systemctl enable backend.service;
 echo "backend service enabled";
+sudo systemctl stop backend.service;
 sudo systemctl start backend.service;
 echo "backend service started";
 sudo systemctl enable rfidentrance.service;
 echo "rfidentrance service enabled";
+sudo systemctl stop rfidentrance.service;
 sudo systemctl start rfidentrance.service;
 echo "rfidentrance service started";
 sudo systemctl enable rfidexit.service;
 echo "rfidexit service enabled";
+sudo systemctl stop rfidexit.service;
 sudo systemctl start rfidexit.service;
 echo "rfidexit service started";
 echo "installation completed";
