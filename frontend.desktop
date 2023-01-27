@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Access_Control
+Comment=RFID based access control system
+Exec=/usr/bin/local/frontend.sh
+Terminal=false
+StartupNotify=true
+Categories=Utility;

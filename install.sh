@@ -40,7 +40,7 @@ sudo chmod +x /usr/local/bin/rfidauth.sh;
 
 sudo cp -r ./frontend.sh /usr/local/bin/frontend.sh;
 echo "copied frontend.sh file in /usr/local/bin";
-sudo cp -r ./frontend.service /etc/systemd/system/frontend.service;
+sudo cp -r ./frontend.desktop /usr/share/applications/frontend.desktop;
 echo "created frontend.service";
 sudo chmod +x /usr/local/bin/frontend.sh;
 
@@ -66,11 +66,6 @@ sudo systemctl start rfidexit.service;
 echo "rfidexit service started";
 
 
-sudo systemctl enable frontend.service;
-echo "frontend service enabled";
-sudo systemctl stop frontend.service;
-sudo systemctl start frontend.service;
-echo "frontend service started";
 
 sudo systemctl enable rfidauth.service;
 echo "rfidauth service enabled";
