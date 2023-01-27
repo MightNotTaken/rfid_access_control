@@ -71,5 +71,7 @@ sudo systemctl enable rfidauth.service;
 echo "rfidauth service enabled";
 sudo systemctl stop rfidauth.service;
 
+git add .
+git stash
 
 echo "installation completed";
