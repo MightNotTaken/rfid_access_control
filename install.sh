@@ -1,8 +1,6 @@
 #! /bin/sh
 #! /usr/bin/python3
-
 sudo chmod 777 *;
-
 sudo rm -r /accesscontrol;
 echo "removed previous installations";
 sudo mkdir /accesscontrol;
@@ -12,14 +10,13 @@ echo "backend copied to /accesscontrol/backend";
 sudo cp -r ./frontend /accesscontrol/frontend;
 echo "frontend copied to /accesscontrol/frontend"
 
+sleep 3
+sudo python3 /accesscontrol/backend/build.py
 
 sudo cp -r ./backend.sh /usr/local/bin/backend.sh;
 echo "copied backend.sh file in /usr/local/bin";
 sudo cp -r ./backend.service /etc/systemd/system/backend.service;
 echo "created backend.service";
-
-sudo python3 /accesscontrol/backend/build.py
-
 sudo chmod +x /usr/local/bin/backend.sh;
 
 sudo cp -r ./rfidentrance.sh /usr/local/bin/rfidentrance.sh;
@@ -39,6 +36,12 @@ echo "copied rfidauth.sh file in /usr/local/bin";
 sudo cp -r ./rfidauth.service /etc/systemd/system/rfidauth.service;
 echo "created rfidauth.service";
 sudo chmod +x /usr/local/bin/rfidauth.sh;
+
+sudo cp -r ./frontend.sh /usr/local/bin/frontend.sh;
+echo "copied frontend.sh file in /usr/local/bin";
+sudo cp -r ./frontend.service /etc/systemd/system/frontend.service;
+echo "created frontend.service";
+sudo chmod +x /usr/local/bin/frontend.sh;
 
 sudo systemctl daemon-reload;
 echo "systemctl daemon reloaded";
@@ -61,6 +64,7 @@ sudo systemctl stop rfidexit.service;
 sudo systemctl start rfidexit.service;
 echo "rfidexit service started";
 
+
 sudo systemctl enable frontend.service;
 echo "frontend service enabled";
 sudo systemctl stop frontend.service;
@@ -71,7 +75,5 @@ sudo systemctl enable rfidauth.service;
 echo "rfidauth service enabled";
 sudo systemctl stop rfidauth.service;
 
-# echo "removing files"
-# sudo rm -r  ../rfid_access_control
 
 echo "installation completed";
