@@ -4,8 +4,6 @@ sudo chmod 777 *;
 sudo rm -r /accesscontrol;
 echo "removed previous installations";
 
-echo "building reader.c"
-sudo python3 build.py
 
 sudo mkdir /accesscontrol;
 echo "/accesscontrol directory created";
