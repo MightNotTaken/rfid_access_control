@@ -38,13 +38,13 @@ sudo cp -r ./rfidauth.service /etc/systemd/system/rfidauth.service;
 echo "created rfidauth.service";
 sudo chmod +x /usr/local/bin/rfidauth.sh;
 
-sudo cp -r ./frontend.sh ~/Desktop/frontend.sh;
+sudo cp -r ./frontend.sh /home/pi/Desktop/frontend.sh;
 sudo cp -r ./frontend.sh /usr/local/bin/frontend.sh;
 echo "copied frontend.sh file in /usr/local/bin";
 sudo cp -r ./frontend.desktop /usr/share/applications/frontend.desktop;
 echo "created frontend.service";
 sudo chmod +x /usr/local/bin/frontend.sh;
-sudo chmod +x ~/Desktop/frontend.sh;
+sudo chmod +x /home/pi/Desktop/frontend.sh;
 
 sudo systemctl daemon-reload;
 echo "systemctl daemon reloaded";
