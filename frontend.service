@@ -1,0 +1,12 @@
+
+[Unit]
+Description=RFID reader service for launching frontend
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/frontend.sh
+User=pi
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
