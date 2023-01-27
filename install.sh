@@ -11,7 +11,7 @@ sudo cp -r ./frontend /accesscontrol/frontend;
 echo "frontend copied to /accesscontrol/frontend"
 
 sleep 3
-sudo python3 /accesscontrol/backend/build.py
+sudo python3 /accesscontrol/build.py
 
 sudo cp -r ./backend.sh /usr/local/bin/backend.sh;
 echo "copied backend.sh file in /usr/local/bin";
