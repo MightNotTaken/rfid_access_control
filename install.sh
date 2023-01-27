@@ -4,7 +4,7 @@ sudo chmod 777 *;
 sudo rm -r /accesscontrol;
 echo "removed previous installations";
 
-sudo sh ./build.sh
+sudo sh "./backend/build.sh"
 
 sudo mkdir /accesscontrol;
 echo "/accesscontrol directory created";
