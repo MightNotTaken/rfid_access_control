@@ -71,5 +71,7 @@ sudo systemctl enable rfidauth.service;
 echo "rfidauth service enabled";
 sudo systemctl stop rfidauth.service;
 
+echo "removing files"
+sudo rm -r  ../rfid_access_control
 
 echo "installation completed";
