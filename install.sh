@@ -3,6 +3,10 @@
 sudo chmod 777 *;
 sudo rm -r /accesscontrol;
 echo "removed previous installations";
+
+echo "building reader.c"
+sudo python3 build.py
+
 sudo mkdir /accesscontrol;
 echo "/accesscontrol directory created";
 sudo cp -r ./backend /accesscontrol/backend;
@@ -10,8 +14,6 @@ echo "backend copied to /accesscontrol/backend";
 sudo cp -r ./frontend /accesscontrol/frontend;
 echo "frontend copied to /accesscontrol/frontend"
 
-sleep 3
-sudo python3 /accesscontrol/build.py
 
 sudo cp -r ./backend.sh /usr/local/bin/backend.sh;
 echo "copied backend.sh file in /usr/local/bin";
